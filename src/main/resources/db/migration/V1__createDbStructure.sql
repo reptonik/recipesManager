@@ -8,8 +8,8 @@ CREATE TABLE recipe (
 );
 CREATE TABLE ingredient (
                             id SERIAL PRIMARY KEY,
-                            name VARCHAR(255) NOT NULL,
-                            UNIQUE (name)
+                            title VARCHAR(255) NOT NULL,
+                            UNIQUE (title)
 );
 CREATE TABLE recipe_ingredient (
                                    recipe_id BIGINT,
