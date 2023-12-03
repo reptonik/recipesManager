@@ -1,0 +1,10 @@
+services:
+  oracle:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: recipe
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    ports:
+      - '5432:5432'
