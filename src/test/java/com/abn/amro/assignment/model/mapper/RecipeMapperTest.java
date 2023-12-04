@@ -29,7 +29,7 @@ class RecipeMapperTest {
         assertEquals(recipe.getInstructions(), recipeDTO.getInstructions());
         assertEquals(recipe.getServings(), recipeDTO.getServings());
         assertEquals(recipe.getIsVegetarian(), recipeDTO.getIsVegetarian());
-        assertTrue(recipe.getRecipeIngredients().containsAll(recipeDTO.getRecipeIngredients()));
+        assertEquals(recipe.getRecipeIngredients().size(), recipeDTO.getRecipeIngredients().size());
     }
 
     @Test

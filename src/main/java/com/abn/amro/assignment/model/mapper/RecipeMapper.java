@@ -6,7 +6,7 @@ import com.abn.amro.assignment.model.entity.Recipe;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface RecipeMapper {
 
     RecipeMapper MAPPER = Mappers.getMapper(RecipeMapper.class);
