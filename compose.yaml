@@ -1,5 +1,5 @@
 services:
-  oracle:
+  postgress:
     image: postgres:latest
     restart: always
     environment:
