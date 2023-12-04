@@ -8,15 +8,18 @@ import java.util.Set;
 
 @Data
 @Entity
-@EqualsAndHashCode(of = "id")
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Ingredient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @EqualsAndHashCode.Include
     private Long id;
 
     @Column(nullable = false, unique = true)
+    @EqualsAndHashCode.Include
     private String title;
 
-    @ManyToMany(mappedBy = "recipeIngredients", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "recipeIngredients", fetch = FetchType.LAZY)
+    @EqualsAndHashCode.Exclude
     private Set<Recipe> recipeIngredients;
 }
